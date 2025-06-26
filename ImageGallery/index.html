@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Image Gallery</h1>
+    <label for="category">Select Category:</label>
+    <select id="category" onchange="filterImages()">
+      <option value="all">All</option>
+      <option value="nature">Nature</option>
+      <option value="food">Food</option>
+      <option value="art">Art</option>
+    </select>
+  </header>
+
+  <main class="gallery">
+    <!-- Nature -->
+    <div class="image nature"><img src="nature1.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature2.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature3.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature4.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature5.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature6.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature7.webp" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="nature8.webp" onclick="openLightbox(this)"></div>
+
+    <!-- Food -->
+    <div class="image food"><img src="food1.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food2.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food3.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food4.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food5.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food6.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food7.webp" onclick="openLightbox(this)"></div>
+    <div class="image food"><img src="food8.webp" onclick="openLightbox(this)"></div>
+
+    <!-- arts -->
+    <div class="image art"><img src="art1.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art2.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art3.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art4.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art5.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art6.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art7.webp" onclick="openLightbox(this)"></div>
+    <div class="image art"><img src="art8.webp" onclick="openLightbox(this)"></div>
+
+  <!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+  <div class="navigation">
+    <button onclick="prevImage()">❮</button>
+    <button onclick="nextImage()">❯</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
